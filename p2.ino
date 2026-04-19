@@ -182,14 +182,11 @@ void     setStatusLEDs();
 // ============================================================
 //  SETUP - Executes once on boot or wake from deep sleep
 // ============================================================
-/**
- * @brief Arduino setup function. Initialises all hardware,
- *        sensors, display, Wi-Fi, and serial communication.
- *        Called once when the ESP32 starts or wakes from deep sleep.
- */
+
 void setup() {
   Serial.begin(115200);
   delay(500);
+
 
   setupPins();    // Configure all GPIO pins and initial states
   setupOLED();    // Initialise SSD1306 display over I2C
